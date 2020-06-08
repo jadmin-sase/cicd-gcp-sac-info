@@ -62,7 +62,7 @@ variable "tenant_domain" {
 variable "luminate_user" {
   //type        = list(string)
   //default     = ("joe@SASEDemo.com" "michael.winslow@SASEDemo.com")
-  default = "joe@SASEDemo.com"
+  default = "joe.user@SASEDemo.com"
   //default = "michael.winslow@SASEDemo.com"
   //default = "mikewinslow@symcmwinslow.luminatesite.com"
 }

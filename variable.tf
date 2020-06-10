@@ -61,8 +61,8 @@ variable "tenant_domain" {
 }
 variable "luminate_user" {
   //type        = list(string)
-  //default = "joe.user@SASEDemo.com"
-  default = "michael.winslow@SASEDemo.com"
+  default = "joe.user@SASEDemo.com"
+  //default = "michael.winslow@SASEDemo.com"
 }
 
 variable "luminate_group" {

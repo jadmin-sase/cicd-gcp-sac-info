@@ -95,8 +95,8 @@ resource "luminate_web_access_policy" "web-access-policy" {
 
 // Change for Account in SAC
 data "luminate_identity_provider" "idp" {
-  identity_provider_name = "SASEDemoOkta"
-  //identity_provider_name = "local"
+  //identity_provider_name = "SASEDemoOkta"
+  identity_provider_name = [var.luminate_idp]
 }
 
 data "luminate_user" "users" {
@@ -108,12 +108,3 @@ data "luminate_group" "groups" {
   identity_provider_id = data.luminate_identity_provider.idp.identity_provider_id
   groups               = [var.luminate_group]
 }
-
-//data "template_file" "startup_script" {
-  //template = "${file("${path.module}/scripts/install-deps.sh")}"
-  //vars = {
-    //connector_command = luminate_connector.connector.command
-    //git_repo = var.git_repo
-    //git_branch = var.git_branch
-  //}
-//}

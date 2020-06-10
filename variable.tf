@@ -59,6 +59,12 @@ variable "tags" {
 variable "tenant_domain" {
   default = "sasedemo.luminatesec.com"
 }
+
+variable "luminate_idp" {
+  //type        = list(string)
+  default = "SASEDemoOkta"
+}
+
 variable "luminate_user" {
   //type        = list(string)
   default = "joe.user@SASEDemo.com"

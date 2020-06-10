@@ -67,8 +67,8 @@ variable "luminate_idp" {
 
 variable "luminate_user" {
   //type        = list(string)
-  default = "joe.user@sasedemo.com"
-  //default = "michael.winslow@SASEDemo.com"
+  //default = "joe.user@sasedemo.com"
+  default = "michael.winslow@SASEDemo.com"
 }
 
 variable "luminate_group" {

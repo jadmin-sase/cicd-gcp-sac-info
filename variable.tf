@@ -62,7 +62,7 @@ variable "tenant_domain" {
 
 variable "luminate_idp" {
   //type        = list(string)
-  default = "SASEDemoOkta"
+  default = "sasedemookta"
 }
 
 variable "luminate_user" {

@@ -88,8 +88,8 @@ resource "luminate_web_application" "nginx" {
 resource "luminate_web_access_policy" "web-access-policy" {
   name                 = "GCP-DEV-access-policy"
   identity_provider_id = data.luminate_identity_provider.idp.identity_provider_id
-  //user_ids             = data.luminate_user.users.user_ids
-  group_ids            = data.luminate_group.groups.group_ids
+  user_ids             = data.luminate_user.users.user_ids
+  //group_ids            = data.luminate_group.groups.group_ids
   applications         = [luminate_web_application.nginx.id]
 }
 
@@ -97,12 +97,12 @@ data "luminate_identity_provider" "idp" {
   identity_provider_name = var.luminate_idp
 }
 
-//data "luminate_user" "users" {
-  //identity_provider_id = data.luminate_identity_provider.idp.identity_provider_id
-  //users                = [var.luminate_user]
-//}
-
-data "luminate_group" "groups" {
+data "luminate_user" "users" {
   identity_provider_id = data.luminate_identity_provider.idp.identity_provider_id
-  groups               = [var.luminate_group]
+  users                = [var.luminate_user]
 }
+
+//data "luminate_group" "groups" {
+  //identity_provider_id = data.luminate_identity_provider.idp.identity_provider_id
+  //groups               = [var.luminate_group]
+//}

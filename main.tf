@@ -85,8 +85,8 @@ resource "luminate_web_application" "nginx" {
   internal_address = "http://127.0.0.1:8080"
 }
 
-resource "luminate_web_access_policy" "web-access-policy" {
-  name                 = "GCP-DEV-access-policy"
+//resource "luminate_web_access_policy" "web-access-policy" {
+  //name                 = "GCP-DEV-access-policy"
   //identity_provider_id = data.luminate_identity_provider.idp.identity_provider_id
   //user_ids             = data.luminate_user.users.user_ids
   // //group_ids            = data.luminate_group.groups.group_ids

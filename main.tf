@@ -91,7 +91,7 @@ resource "luminate_web_application" "nginx" {
   //user_ids             = data.luminate_user.users.user_ids
   // //group_ids            = data.luminate_group.groups.group_ids
   //applications         = [luminate_web_application.nginx.id]
-}
+//}
 
 //data "luminate_identity_provider" "idp" {
   //identity_provider_name = var.luminate_idp
